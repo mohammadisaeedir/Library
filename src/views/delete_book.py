@@ -56,7 +56,7 @@ def delete_book_window():
                                                  f'Do you want to delete {tree_book.item(index)["values"][1]} ?')
             if msg == 'yes':
                 try:
-                    tkinter.messagebox.showinfo('Successful Operation', f'{selected} is deleted!')
+                    tkinter.messagebox.showinfo('Successful Operation', f'\"{selected}\" is deleted!')
                     b_del_book(tree_book.item(index)["values"][0])
                     b_insert_log('Success', 'Delete Book', f'{selected} is deleted', '-')
                     view_all_delete()
