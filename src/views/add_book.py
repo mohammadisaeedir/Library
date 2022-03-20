@@ -70,7 +70,7 @@ def add_book_window():
                 print((title.get(), author.get(), book_year.get(), isbn.get(),
                        book_count.get(), cat_id.get()))
                 b_insert_log('Success', 'Insert Book', f'New Book: {title.get()} by {author.get()} is added', '-')
-                tkinter.messagebox.showinfo('Successful Message', f'{title.get()} is added to database')
+                tkinter.messagebox.showinfo('Successful Message', f'\"{title.get()}\" is added to database')
             else:
                 tkinter.messagebox.showerror('Required Data', 'All Fields Are Required')
         except ConnectionError:

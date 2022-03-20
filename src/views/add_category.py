@@ -45,7 +45,7 @@ def add_category_window():
             if title.get():
                 b_add_category(title.get())
                 b_insert_log('Success', 'Insert Category', f'New Category: {title.get()} is added', '-')
-                tkinter.messagebox.showinfo('Successful Message', f'{title.get()} is added to database')
+                tkinter.messagebox.showinfo('Successful Message', f'\"{title.get()}\" is added to database')
                 view_all_cat()
             else:
                 tkinter.messagebox.showerror('Required Data', 'All Fields Are Required')

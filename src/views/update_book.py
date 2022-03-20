@@ -65,7 +65,7 @@ def update_book_window():
                               isbn.get(),
                               book_count.get())
                 b_insert_log('Success', 'Update Book', f'Book: {title.get()} is updated', '-')
-                tkinter.messagebox.showinfo('Successful Message', f'Book of {title.get()} is updated')
+                tkinter.messagebox.showinfo('Successful Message', f'Book of \"{title.get()}\" is updated')
                 view_all_update()
             else:
                 tkinter.messagebox.showerror('Required Data', 'All Fields Are Required')

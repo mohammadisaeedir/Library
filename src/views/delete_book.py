@@ -14,8 +14,7 @@ def delete_book_window():
     v1.geometry('900x300')
     v1.resizable(width=False, height=False)
     tree_book = ttk.Treeview(v1, column=("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"),
-                             show='headings',
-                             height=10)
+                             height=10, show='headings')
     tree_book.column("#1", anchor=CENTER, width=7)
     tree_book.heading("# 1", text="ID")
     tree_book.column("# 2", anchor=CENTER, width=170)

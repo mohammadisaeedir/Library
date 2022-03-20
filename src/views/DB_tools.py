@@ -15,12 +15,12 @@ def db_tools_window():
 
     def delete_db():
         msg = tkinter.messagebox.askquestion('Caution !!!', f'If you continue!,\n'
-                                                            f'All DB data will be Vanished\n\n'
+                                                            f'All DB data will be \"Vanished\"\n\n'
                                                             f'Are you Sure to continue???')
         if msg == 'yes':
             try:
                 b_delete_db()
-                tkinter.messagebox.showinfo('Successful Operation', 'Your Database is Deleted')
+                tkinter.messagebox.showinfo('Successful Operation', 'Your Database is Completely Deleted')
                 b_insert_log('Success', 'Delete DB', 'Your Database is deleted', '-')
 
             except ConnectionError:
@@ -33,7 +33,7 @@ def db_tools_window():
         if msg == 'yes':
             try:
                 b_import_data()
-                tkinter.messagebox.showinfo('Successful Operation', 'Your Database is Upgraded')
+                tkinter.messagebox.showinfo('Successful Operation', 'Your Database is Upgraded by sample data')
                 b_insert_log('Success', 'Import DB', 'Your Database is Upgraded', '-')
 
             except ConnectionError:
@@ -48,7 +48,7 @@ def db_tools_window():
     del_button = Button(v1, text='Delete Database', command=delete_db, bg='#9A3334', fg='White')
     del_button.grid(row=1, column=0, pady=7)
 
-    import_label = Label(v1, text='Do you want to import data in your db,\n\n '
+    import_label = Label(v1, text='If you want to import data in your db,\n\n '
                                   'click the below button')
     import_label.grid(row=2, column=0, pady=7)
     import_label.configure(font=font2)

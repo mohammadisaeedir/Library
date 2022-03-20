@@ -37,11 +37,11 @@ def logs_window():
     tree_search.grid(row=3, column=0, padx=5, pady=5, columnspan=6)
 
     def clear_logs_history():
-        msg = tkinter.messagebox.askquestion('Drop All Logs', 'Do you want to drop Logs table?!')
+        msg = tkinter.messagebox.askquestion('Drop All Logs', 'Do you want to \"drop\" Logs table?!')
         if msg == 'yes':
             try:
                 b_logs_drop()
-                tkinter.messagebox.showinfo('Successful', 'The table of Logs deleted completely')
+                tkinter.messagebox.showinfo('Successful', 'The Table of Logs Deleted Completely')
                 view_all_logs()
             except ConnectionError:
                 b_insert_log('Failure', 'Drop Log Table', 'Could not drop table', 'ConnectionError')

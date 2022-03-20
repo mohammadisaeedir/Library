@@ -61,7 +61,7 @@ def add_user_view():
                 b_add_user(user_name.get(), user_family.get(), user_age.get(), user_phone.get(), user_mail.get())
                 b_insert_log('Success', 'Insert User', f'{user_name.get()} {user_family.get()} is added', '-')
                 tkinter.messagebox.showinfo('Successful Message',
-                                            f'New User: {user_name.get()} {user_family.get()} is added to database')
+                                            f'New User: \"{user_name.get()} {user_family.get()}\" is added to database')
             else:
                 tkinter.messagebox.showerror('Required Data', 'All Fields except Email is Required')
         except ConnectionError:
